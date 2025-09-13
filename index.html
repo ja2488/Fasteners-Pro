@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fasteners Pro – Support</title>
+  <style>
+    :root {
+      --primary: #0A66FF;
+      --text: #333;
+      --muted: #666;
+      --bg: #f4f4f4;
+      --card: #fff;
+      --border: #ddd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: var(--bg);
+      margin: 0;
+      color: var(--text);
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      padding: 28px 32px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    }
+    header {
+      padding: 18px 0 6px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 22px;
+    }
+    h1 { margin: 0 0 8px; color: var(--text); }
+    h2 { color: var(--text); margin-top: 34px; }
+    h3 { margin-top: 20px; }
+    p { margin: 10px 0; }
+    ul { margin: 8px 0 12px 20px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .section { margin-top: 28px; }
+    .callout {
+      border-left: 4px solid var(--primary);
+      background: #f7fbff;
+      padding: 12px 14px;
+      margin: 16px 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+    }
+    footer {
+      max-width: 900px;
+      margin: 28px auto 40px;
+      padding: 16px 32px;
+      font-size: 0.92em;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: transparent;
+    }
+    .kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+      border: 1px solid var(--border);
+      border-bottom-width: 2px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Fasteners Pro – Support</h1>
+      <p>Welcome to the support page for <strong>Fasteners Pro</strong>. If you have questions, run into issues, or need help interpreting results, you’re in the right place.</p>
+    </header>
+
+    <div class="section">
+      <h2>🔧 Common Issues & Fixes</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>1) App not opening or crashing</h3>
+          <ul>
+            <li>Confirm your device meets the minimum OS requirements (keep your OS fully updated).</li>
+            <li>Force close the app and reopen it. If that fails, uninstall and reinstall.</li>
+            <li>Ensure permissions are granted (e.g., file/storage if exporting results).</li>
+            <li>Free up device storage (aim for at least 500&nbsp;MB available).</li>
+            <li>Restart your device to clear transient issues.</li>
+          </ul>
+          <p class="callout"><strong>Still crashing?</strong> Email logs/steps to <a href="mailto:pmicorp@outlook.com">pmicorp@outlook.com</a> and include device model, OS version, and a brief description of actions before the crash.</p>
+        </div>
+
+        <div class="card">
+          <h3>2) Inaccurate torque calculations</h3>
+          <ul>
+            <li><strong>Verify fastener material & property inputs.</strong> Select the correct material/spec and confirm tensile/yield data.</li>
+            <li><strong>Check units.</strong> Torque can be in <span class="kbd">N·m</span> or <span class="kbd">ft·lbf</span>; forces in <span class="kbd">N</span> or <span class="kbd">lbf</span>; areas in <span class="kbd">mm²</span> or <span class="kbd">in²</span>.</li>
+            <li><strong>Nut factor / friction (K) and lubrication.</strong> Make sure the chosen K reflects your lubrication/finish (dry, oiled, moly, plated).</li>
+            <li><strong>Thread class & engagement.</strong> Confirm class (e.g., 2A/2B, 3A/3B, 6g/6H) and effective thread engagement length.</li>
+            <li><strong>Diameter & pitch.</strong> Verify nominal diameter, pitch (or TPI), and tensile stress area are correct.</li>
+          </ul>
+          <p class="callout"><strong>Review your Results screen.</strong> Compare each detail (material, K, thread class, diameter, engagement, units) for consistency with your application. Adjust inputs to match your real joint setup.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📋 FAQs</h2>
+
+      <h3>Q: Which units does Fasteners Pro use?</h3>
+      <p>A: You can work in metric or imperial. Torque: <span class="kbd">N·m</span> or <span class="kbd">ft·lbf</span>. Force: <span class="kbd">N</span> or <span class="kbd">lbf</span>. Area: <span class="kbd">mm²</span> or <span class="kbd">in²</span>. Stress: <span class="kbd">MPa</span> or <span class="kbd">psi</span>.</p>
+
+      <h3>Q: My torque seems high/low. What should I check first?</h3>
+      <ul>
+        <li>Material & grade/spec (and that its properties match your source).</li>
+        <li>Nut factor (K) and lubrication/finish condition.</li>
+        <li>Thread class (fit) and effective engagement length.</li>
+        <li>Correct diameter, pitch/TPI, and tensile stress area.</li>
+        <li>Unit settings (no hidden unit mismatch).</li>
+      </ul>
+
+      <h3>Q: Can I override default friction / K values?</h3>
+      <p>A: Yes—set a K that matches your lubrication, surface finish, and procedure. If uncertain, use values from your organization’s torque specs or the fastener manufacturer.</p>
+
+      <h3>Q: Does the app save my results?</h3>
+      <p>A: Results are kept within the current session and can be exported if you choose. Close the app to clear unsaved session data.</p>
+
+      <h3>Q: Are results “field ready” without verification?</h3>
+      <p>A: No. Always verify with your engineering standards, procedures, and calibrated tools. The app is an aid, not a substitute for professional judgment.</p>
+    </div>
+
+    <div class="section">
+      <h2>🧪 Best Practices for Reliable Torque Results</h2>
+      <ul>
+        <li>Use up-to-date, authoritative material data (specs/standards or manufacturer datasheets).</li>
+        <li>Match K to lubrication & finish; retest if conditions change.</li>
+        <li>Confirm thread fit/class and engagement meet your design intent.</li>
+        <li>Use calibrated torque tools and follow your torque procedure (e.g., snug-pass + angle, staged tightening).</li>
+        <li>Re-run calculations when any variable changes (material, lube, class, diameter, pitch, units).</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📞 Contact Support</h2>
+      <p><strong>Email:</strong> <a href="mailto:pmicorp@outlook.com">pmicorp@outlook.com</a></p>
+      <p><strong>Developer:</strong> Jeffrey Andrews</p>
+      <p>When emailing, include: device model, OS version, Fasteners Pro app version, steps to reproduce, and screenshots if possible.</p>
+    </div>
+
+    <div class="section">
+      <h2>📄 Legal & Privacy</h2>
+      <ul>
+        <li><a href="https://www.privacypolicies.com/live/8c9bbc87-3bcb-4102-8e15-b2318643fdbb">Privacy Policy</a></li>
+      </ul>
+
+      <h3>Terms of Service</h3>
+      <p>This application is provided “as is” without warranties, expressed or implied. By using this app, you agree that:</p>
+      <ul>
+        <li>You are responsible for how the information generated by the app is used.</li>
+        <li>All calculated values should be independently verified against your procedures, specifications, and calibrated tools before being relied upon for safety-critical work.</li>
+        <li>The developer and associated parties are not liable for any damages, losses, or injuries resulting from use of this app.</li>
+        <li>Use of this app is at your own discretion and risk.</li>
+        <li>This app does not replace professional engineering analysis, standards, or certified torque procedures.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Jeffrey Andrews. All rights reserved.</p>
+  </footer>
+</body>
+</html>
